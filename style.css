@@ -123,3 +123,32 @@ footer {
   border-radius: 1rem;
   padding: 1rem;
 }
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        width: 100%;
+        padding: 15px;
+    }
+    .textques {
+        font-size: 1rem;
+    }
+    .formule {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body{
+        width: 100%;
+        padding: 10px;
+    }
+    .textques {
+        font-size: 0.8rem;
+    }
+    .formule {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}
