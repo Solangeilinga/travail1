@@ -1,5 +1,4 @@
-html{width=100%;
-     height=100%}
+
  body{
     background-color:beige;
     font-style: Georgia;
@@ -20,42 +19,47 @@ html{width=100%;
 
 }
 .premiere_ligne{
-    width: 90%;
-    max-width: 500px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 15px;
-    background-color:rgb(221, 102, 11);
-    position: relative;
-    overflow-y: auto;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  gap:10%;
+  background-color:#D4AF37;
+  border-radius:1rem;
+  width: 100%;
+  padding: 1.8rem;
+  height: 5cap;
 }
-div a:hover {
-    background-color:#D4AF37;
-    padding: 0.2rem;
-  }
+
 .menu{
   display: flex;
   gap:8%;
   flex-wrap: wrap;
-  background-color: rgb(250, 247, 247);
   border-radius:10px;
   border:solid;
   margin:0rem 13rem 0 10rem;
   width: auto;
-  padding: 1rem;
 }
 
-a{text-decoration: none; color:black}
+.active,.A,.B,.C,.D,.E,.F{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-size: 18px;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
  
-.menu .active {
-    background-color: #D4AF37;
-    text-align:justify;
-    padding: 0.2rem;
+.active,.A:hover,.B:hover,.C:hover,.D:hover,.E:hover,.F:hover{
+  background-color: #D4AF37;
+  color: white;
+}
 
-  }
+.menu .active {
+  background-color: #D4AF37;
+  color: white;
+}
+
+
   .basket,.account{
     font-size: 3rem;
   }
@@ -121,37 +125,37 @@ footer {
   background-color:#D4AF37;
   position: absolute;
   bottom: 0%;
-  bottom: 0;
   width:100%;
   border-radius: 1rem;
   padding: 1rem;
 }
 
-
-@media only screen and (max-width: 800px) {
-    body {
-        width: 100%;
-        padding: 15px;
-    }
-    .textques {
-        font-size: 1rem;
-    }
-    .formule {
-        width: 90%;
-        font-size: 1rem;
-    }
+@media (max-width: 768px) {
+  .premiere_ligne,footer {
+      width: 95%;
+      padding: 15px;
+      max-width: 400px;
+  }
+  .textques {
+      font-size: 0.9rem;
+  }
+  .menu{
+      width: 90%;
+      font-size: 0.9rem;
+  }
 }
 
-@media only screen and (max-width: 500px) {
-    body{
-        width: 100%;
-        padding: 10px;
-    }
-    .textques {
-        font-size: 0.8rem;
-    }
-    .formule {
-        width: 100%;
-        font-size: 0.8rem;
-    }
+@media (max-width: 480px) {
+  .premiere_ligne,footer {
+      width: 95%;
+      padding: 10px;
+      max-width: 350px;
+  }
+  .textques {
+      font-size: 0.8rem;
+  }
+  .menu {
+      width: 100%;
+      font-size: 0.8rem;
+  }
 }
