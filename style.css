@@ -8,11 +8,6 @@
     flex-wrap: wrap;
 }
 
-.logo {
-    font-size: 1.6em;
-    font-weight: bold;
-}
-
 .search-bar {
     display: flex;
     align-items: center;
@@ -69,67 +64,6 @@ body {
   color: #333;
 }
 
-/* Première ligne : haut de page */
-.premiere_ligne {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #2c3e50;
-  color: white;
-  padding: 10px 20px;
-  flex-wrap: wrap;
-}
-
-.name {
-  font-size: 1.4em;
-  font-weight: bold;
-}
-
-.recherche {
-  display: flex;
-  gap: 5px;
-}
-
-.recherche input {
-  padding: 6px 10px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-}
-
-.recherche button {
-  padding: 6px 10px;
-  border: none;
-  background-color: #e67e22;
-  color: white;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.recherche button:hover {
-  background-color: #cf711f;
-}
-
-.droite {
-  display: flex;
-  gap: 20px;
-}
-
-.compte, .panier {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.compte span, .panier span {
-  font-size: 0.9em;
-}
-
-.account a, .basket i {
-  color: white;
-  font-size: 1.2em;
-}
 
 /* En-tête navigation */
 header {
