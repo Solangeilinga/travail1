@@ -103,9 +103,8 @@ body {
   border-radius: 5px;
 }
 .nav-links a.active {
-    color: #e67e22;
-    background-color: #3498db;
-    border-radius: 5px;
+    color: White;
+    background-color: #e67e22;
     font-weight: bold;
 }
 
@@ -149,6 +148,44 @@ footer a {
 
 footer a:hover {
   color: #e67e22;
+}
+
+form {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.formule {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.formule:hover {
+    background-color: #218838;
+}
+.contenu{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+
+  text-align: center;
 }
 
 /* Responsive */
