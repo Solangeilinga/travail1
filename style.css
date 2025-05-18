@@ -103,7 +103,7 @@ body {
   border-radius: 5px;
 }
 .nav-links a.active {
-    color: white;
+    color: #e67e22;
     background-color: #3498db;
     border-radius: 5px;
     font-weight: bold;
