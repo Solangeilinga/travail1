@@ -1,52 +1,70 @@
-html, body {
-    height: 100%;             /* Fait que la page prend toute la hauteur de l'écran */
+/* Réinitialisation de base */
+* {
     margin: 0;
     padding: 0;
-}
-body {
-    display: flex;            /* Active le modèle flexbox sur le body */
-    flex-direction: column;  /* Empile les éléments verticalement (header, main, footer) */
-    min-height: 100vh;        /* Le body fait au minimum 100% de la hauteur de la fenêtre */
+    box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header - Barre supérieure */
 .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: #2c3e50;
     color: white;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
+.logo {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/* Barre de recherche */
 .search-bar {
     display: flex;
     align-items: center;
 }
 
 .search-bar input {
-    padding: 5px 10px;
+    padding: 8px 12px;
     border-radius: 4px 0 0 4px;
     border: none;
-    width: 200px;
+    width: 250px;
+    outline: none;
 }
 
 .search-bar button {
-    padding: 6px 10px;
+    padding: 8px 12px;
     background-color: #e67e22;
     border: none;
     color: white;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .search-bar button:hover {
     background-color: #d35400;
 }
 
+/* Actions utilisateur */
 .user-actions {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .user-actions a {
@@ -56,158 +74,188 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    transition: color 0.3s;
 }
 
 .user-actions a:hover {
     color: #e67e22;
 }
-/* Réinitialisation de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.6em;
-  font-weight: bold;
+/* Navigation */
+nav {
+    background-color: #34495e;
+    padding: 0;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
+    list-style: none;
+    display: flex;
+    gap: 0;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0;
 }
 
 .nav-links a {
-  text-decoration: none;
-  font-weight: 500;
-  color: black;
-  padding: 10px 15px;
-  transition: color 0.3s, background-color 0.3s;
-}
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
 }
 
 .nav-links a:hover {
-  background-color: #f0f0f0;
-  border-radius: 5px;
+    background-color: #2c3e50;
 }
+
 .nav-links a.active {
-    color: White;
     background-color: #e67e22;
     font-weight: bold;
 }
 
-/* Main */
+/* Main - Contenu principal */
 main {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #fff;
-  flex: 1;  
+    flex: 1;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f9fa;
 }
 
 main h1 {
-  font-size: 2em;
-  color: #e67e22;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
 }
 
-/* Footer */
-footer {
-  background-color: #2c3e50;
-  color: white;
-  padding: 30px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+main p {
+    font-size: 1.2em;
+    color: #7f8c8d;
 }
 
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer ul li {
-  margin-bottom: 8px;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-footer a:hover {
-  color: #e67e22;
+/* Formulaires */
+.contenu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 form {
     max-width: 400px;
     background-color: #fff;
-    padding: 20px;
+    padding: 25px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.info{
+form h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.info {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1em;
 }
+
+.info:focus {
+    outline: none;
+    border-color: #e67e22;
+}
+
 .formule {
     background-color: #28a745;
     color: white;
     border: none;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
+    padding: 12px;
     border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
 .formule:hover {
     background-color: #218838;
 }
-.contenu{
-  position: absolute;
-  left: 50%;
-  top:50%;
-  transform: translate(-50%,-50%);
 
-  text-align: center;
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.footer-section {
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: #e67e22;
+    font-size: 1.1em;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e67e22;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .premiere_ligne {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
 
-  .droite {
-    flex-direction: row;
-    gap: 15px;
-  }
+    .search-bar input {
+        width: 100%;
+    }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
 
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+    .nav-links a {
+        padding: 12px 20px;
+        border-bottom: 1px solid #2c3e50;
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
